@@ -46,11 +46,10 @@ class LogViewer
     /**
      * Create a new instance.
      *
-     * @param \KossShtukert\LogViewer\Log\Factory    $factory
+     * @param \KossShtukert\LogViewer\Log\Factory $factory
      * @param \KossShtukert\LogViewer\Log\Filesystem $filesystem
-     * @param \KossShtukert\LogViewer\Log\Data       $data
+     * @param \KossShtukert\LogViewer\Log\Data $data
      *
-     * @return void
      */
     public function __construct(Factory $factory, Filesystem $filesystem, Data $data)
     {

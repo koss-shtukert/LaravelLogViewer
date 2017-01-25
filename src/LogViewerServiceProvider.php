@@ -11,12 +11,12 @@
 
 namespace KossShtukert\LogViewer;
 
+use Illuminate\Routing\Router;
+use Illuminate\Support\ServiceProvider;
 use KossShtukert\LogViewer\Http\Controllers\LogViewerController;
 use KossShtukert\LogViewer\Log\Data;
 use KossShtukert\LogViewer\Log\Factory;
 use KossShtukert\LogViewer\Log\Filesystem;
-use Illuminate\Routing\Router;
-use Illuminate\Support\ServiceProvider;
 
 /**
  * This is the log viewer service provider class.
@@ -44,17 +44,17 @@ class LogViewerServiceProvider extends ServiceProvider
      */
     protected function setupPackage()
     {
-        $source = realpath(__DIR__.'/../config/logviewer.php');
+        $source = realpath(__DIR__ . '/../config/logviewer.php');
 
         $this->publishes([$source => config_path('logviewer.php')], 'config');
         $this->publishes([
-            realpath(__DIR__.'/../assets/css') => public_path('assets/styles'),
-            realpath(__DIR__.'/../assets/js')  => public_path('assets/scripts'),
+            realpath(__DIR__ . '/../assets/css') => public_path('assets/styles'),
+            realpath(__DIR__ . '/../assets/js')  => public_path('assets/scripts'),
         ], 'public');
 
         $this->mergeConfigFrom($source, 'logviewer');
 
-        $this->loadViewsFrom(realpath(__DIR__.'/../views'), 'logviewer');
+        $this->loadViewsFrom(realpath(__DIR__ . '/../views'), 'logviewer');
     }
 
     /**
@@ -67,7 +67,7 @@ class LogViewerServiceProvider extends ServiceProvider
     protected function setupRoutes(Router $router)
     {
         $router->group(['namespace' => 'KossShtukert\LogViewer\Http\Controllers'], function (Router $router) {
-            require __DIR__.'/Http/routes.php';
+            require __DIR__ . '/Http/routes.php';
         });
     }
 
@@ -110,7 +110,7 @@ class LogViewerServiceProvider extends ServiceProvider
     {
         $this->app->singleton('logviewer.filesystem', function ($app) {
             $files = $app['files'];
-            $path = $app['path.storage'].'/logs';
+            $path = $app['path.storage'] . '/logs';
 
             return new Filesystem($files, $path);
         });
