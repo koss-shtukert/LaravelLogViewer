@@ -59,7 +59,7 @@ This option (`'layout'`) defines the layout to extend when building views. The d
 
 In order for it to work in any Laravel application, you must ensure that you know how to use my [Laravel Core](https://github.com/koss-shtukert/Laravel-Core) package as configuration and knowledge of the `app:install` and `app:update ` commands is required.
 
-Laravel LogViewer will register four routes. The only one of interest to you is `'logviewer'` (`logviewer.index`) as it will be the main entry point for the use of this package. You can checkout the other three routes in the [source](https://github.com/koss-shtukert/LaravelLogViewerblob/master/src/routes.php) if you must.
+Laravel LogViewer will register four routes. The only one of interest to you is `'logviewer'` (`logviewer.index`) as it will be the main entry point for the use of this package. You can checkout the other three routes in the [source](https://github.com/koss-shtukert/LaravelLogViewerblob/master/src/Http/routes.php) if you must.
 
 
 ## License
