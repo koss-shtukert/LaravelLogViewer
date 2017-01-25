@@ -28,30 +28,30 @@ class Log
     /**
      * The available log levels.
      *
-     * @var string[]
+     * @var string
      */
     protected $levels;
 
     /**
      * The selected log level.
      *
-     * @var string
+     * @var array
      */
-    protected $level;
+    protected $level = [];
 
     /**
      * The processed log data.
      *
      * @var array
      */
-    protected $data;
+    protected $data = [];
 
     /**
      * Create a new instance.
      *
-     * @param string   $raw
-     * @param string[] $levels
-     * @param string   $level
+     * @param string $raw
+     * @param array $levels
+     * @param string $level
      */
     public function __construct($raw, array $levels, $level = 'all')
     {
@@ -83,7 +83,7 @@ class Log
             for ($i = 0, $j = count($heading); $i < $j; $i++) {
                 foreach ($this->levels as $level) {
                     if ($this->level == $level || $this->level == 'all') {
-                        if (strpos(strtolower($heading[$i]), strtolower('.'.$level))) {
+                        if (strpos(strtolower($heading[$i]), strtolower('.' . $level))) {
                             $log[] = ['level' => $level, 'header' => $heading[$i], 'stack' => $data[$i]];
                         }
                     }

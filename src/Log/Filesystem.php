@@ -39,9 +39,8 @@ class Filesystem
      * Create a new instance.
      *
      * @param \Illuminate\Filesystem\Filesystem $files
-     * @param string                            $path
+     * @param string $path
      *
-     * @return void
      */
     public function __construct(Files $files, $path)
     {
@@ -60,7 +59,7 @@ class Filesystem
      */
     protected function path($date)
     {
-        $path = $this->path.'/laravel-'.$date.'.log';
+        $path = $this->path . '/laravel-' . $date . '.log';
 
         if ($this->files->exists($path)) {
             return realpath($path);
@@ -110,7 +109,7 @@ class Filesystem
      */
     public function files()
     {
-        return glob($this->path.'/laravel-*.log', GLOB_BRACE);
+        return glob($this->path . '/laravel-*.log', GLOB_BRACE);
     }
 
     /**

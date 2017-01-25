@@ -12,7 +12,6 @@
 namespace KossShtukert\LogViewer\Http\Controllers;
 
 use Carbon\Carbon;
-use KossShtukert\LogViewer\Facades\LogViewer;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Input;
@@ -20,6 +19,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
+use KossShtukert\LogViewer\Facades\LogViewer;
 
 /**
  * This is the log viewer controller class.
@@ -38,10 +38,9 @@ class LogViewerController extends Controller
     /**
      * Create a new instance.
      *
-     * @param int      $perPage
+     * @param int $perPage
      * @param string[] $middleware
      *
-     * @return void
      */
     public function __construct($perPage, array $middleware)
     {
@@ -65,7 +64,7 @@ class LogViewerController extends Controller
             Session::reflash();
         }
 
-        return Redirect::to('logviewer/'.$today.'/all');
+        return Redirect::to('logviewer/' . $today . '/all');
     }
 
     /**
@@ -81,10 +80,10 @@ class LogViewerController extends Controller
             LogViewer::delete($date);
             $today = Carbon::today()->format('Y-m-d');
 
-            return Redirect::to('logviewer/'.$today.'/all')
+            return Redirect::to('logviewer/' . $today . '/all')
                 ->with('success', 'Log deleted successfully!');
         } catch (\Exception $e) {
-            return Redirect::to('logviewer/'.$date.'/all')
+            return Redirect::to('logviewer/' . $date . '/all')
                 ->with('error', 'There was an error while deleting the log.');
         }
     }
@@ -92,7 +91,7 @@ class LogViewerController extends Controller
     /**
      * Show the log viewing page.
      *
-     * @param string      $date
+     * @param string $date
      * @param string|null $level
      *
      * @return \Illuminate\Http\Response
@@ -111,12 +110,12 @@ class LogViewerController extends Controller
         }
 
         $data = [
-            'logs'       => $logs,
-            'date'       => $date,
-            'url'        => 'logviewer',
-            'data_url'   => URL::route('logviewer.index').'/data/'.$date.'/'.$level.'?page='.$page,
-            'levels'     => LogViewer::levels(),
-            'current'    => $level,
+            'logs'     => $logs,
+            'date'     => $date,
+            'url'      => 'logviewer',
+            'data_url' => URL::route('logviewer.index') . '/data/' . $date . '/' . $level . '?page=' . $page,
+            'levels'   => LogViewer::levels(),
+            'current'  => $level,
         ];
 
         return View::make('logviewer::show', $data);
@@ -125,7 +124,7 @@ class LogViewerController extends Controller
     /**
      * Show the log contents.
      *
-     * @param string      $date
+     * @param string $date
      * @param string|null $level
      *
      * @return \Illuminate\Http\Response
@@ -141,7 +140,7 @@ class LogViewerController extends Controller
 
         $path = (new \ReflectionClass($paginator))->getProperty('path');
         $path->setAccessible(true);
-        $path->setValue($paginator, URL::route('logviewer.index').'/'.$date.'/'.$level);
+        $path->setValue($paginator, URL::route('logviewer.index') . '/' . $date . '/' . $level);
 
         if (count($data) > $paginator->perPage()) {
             $log = array_slice($data, $paginator->firstItem() - 1, $paginator->perPage());

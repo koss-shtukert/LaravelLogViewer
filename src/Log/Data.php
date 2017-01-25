@@ -24,14 +24,14 @@ class Data
     /**
      * The cached log levels.
      *
-     * @var string[]
+     * @var string
      */
     protected $levels;
 
     /**
      * Get the log levels.
      *
-     * @return string[]
+     * @return string
      */
     public function levels()
     {
