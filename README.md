@@ -4,8 +4,7 @@ Laravel LogViewer
 Laravel LogViewer was created by, and is maintained by [Koss Shtukert](https://github.com/koss-shtukert), and provides a LogViewer admin module for [Laravel 5](http://laravel.com). Feel free to check out the [releases](https://github.com/koss-shtukert/LaravelLogViewer/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
 
 <p align="center">
-<a href="https://travis-ci.org/koss-shtukert/LaravelLogViewer"><img src="https://travis-ci.org/koss-shtukert/LaravelLogViewer.svg?branch=master&style=flat-square" alt="Build Status"></img></a>
-<a href="https://scrutinizer-ci.com/g/koss-shtukert/LaravelLogViewer/code-structure"><img src="https://scrutinizer-ci.com/g/koss-shtukert/LaravelLogViewer/badges/coverage.png?b=master&style=flat-square" alt="Coverage Status"></img></a>
+<a href="https://travis-ci.org/koss-shtukert/LaravelLogViewer"><img src="https://travis-ci.org/koss-shtukert/LaravelLogViewer.svg?branch=master&style=flat" alt="Build Status"></img></a>
 <a href="https://scrutinizer-ci.com/g/koss-shtukert/LaravelLogViewer"><img src="https://img.shields.io/scrutinizer/g/koss-shtukert/LaravelLogViewer.svg?style=flat-square" alt="Quality Score"></img></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></img></a>
 <a href="https://github.com/koss-shtukert/LaravelLogViewer/releases"><img src="https://img.shields.io/github/release/koss-shtukert/LaravelLogViewer.svg?style=flat-square" alt="Latest Version"></img></a>
