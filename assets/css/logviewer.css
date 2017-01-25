@@ -1,3 +1,13 @@
+.first-content-block {
+    margin: 0 -5px 5px;
+    background-color: #fff;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-top-width: 0;
+    border-radius: 0;
+    padding: 15px;
+}
+
 .log {
     padding:10px;
 }
