@@ -20,7 +20,7 @@ use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
 /**
  * This is the service provider test class.
  *
- * @author Graham Campbell <graham@alt-three.com>
+ * @author Koss Shtukert <karakurtkoss@gmail.com>
  */
 class ServiceProviderTest extends AbstractTestCase
 {

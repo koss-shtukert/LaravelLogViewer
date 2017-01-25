@@ -17,7 +17,7 @@ use GrahamCampbell\TestBench\AbstractPackageTestCase;
 /**
  * This is the abstract test case class.
  *
- * @author Graham Campbell <graham@alt-three.com>
+ * @author Koss Shtukert <karakurtkoss@gmail.com>
  */
 abstract class AbstractTestCase extends AbstractPackageTestCase
 {

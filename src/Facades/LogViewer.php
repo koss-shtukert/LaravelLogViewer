@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * This is the logviewer facade class.
  *
- * @author Graham Campbell <graham@alt-three.com>
+ * @author Koss Shtukert <karakurtkoss@gmail.com>
  */
 class LogViewer extends Facade
 {

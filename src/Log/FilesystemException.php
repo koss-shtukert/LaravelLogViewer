@@ -14,7 +14,7 @@ namespace KossShtukert\LogViewer\Log;
 /**
  * This is the filesystem exception class.
  *
- * @author Graham Campbell <graham@alt-three.com>
+ * @author Koss Shtukert <karakurtkoss@gmail.com>
  */
 class FilesystemException extends \Exception
 {

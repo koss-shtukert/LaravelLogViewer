@@ -14,7 +14,7 @@ namespace KossShtukert\LogViewer\Log;
 /**
  * This is the log class.
  *
- * @author Graham Campbell <graham@alt-three.com>
+ * @author Koss Shtukert <karakurtkoss@gmail.com>
  */
 class Log
 {

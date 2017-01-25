@@ -17,7 +17,7 @@ use ReflectionClass;
 /**
  * This is the data class.
  *
- * @author Graham Campbell <graham@alt-three.com>
+ * @author Koss Shtukert <karakurtkoss@gmail.com>
  */
 class Data
 {

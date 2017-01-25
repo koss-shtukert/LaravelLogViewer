@@ -19,7 +19,7 @@ use KossShtukert\Tests\LogViewer\AbstractTestCase;
 /**
  * This is the logviewer facade test class.
  *
- * @author Graham Campbell <graham@alt-three.com>
+ * @author Koss Shtukert <karakurtkoss@gmail.com>
  */
 class LogViewerTest extends AbstractTestCase
 {

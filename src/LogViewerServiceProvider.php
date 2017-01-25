@@ -21,7 +21,7 @@ use KossShtukert\LogViewer\Log\Filesystem;
 /**
  * This is the log viewer service provider class.
  *
- * @author Graham Campbell <graham@alt-three.com>
+ * @author Koss Shtukert <karakurtkoss@gmail.com>
  */
 class LogViewerServiceProvider extends ServiceProvider
 {

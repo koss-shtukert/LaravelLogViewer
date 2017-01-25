@@ -24,7 +24,7 @@ use KossShtukert\LogViewer\Facades\LogViewer;
 /**
  * This is the log viewer controller class.
  *
- * @author Graham Campbell <graham@alt-three.com>
+ * @author Koss Shtukert <karakurtkoss@gmail.com>
  */
 class LogViewerController extends Controller
 {
